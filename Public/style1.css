@@ -1,0 +1,105 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; /* Set background to black */
+    color: white; /* Set text color to white */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.header .home-icon {
+    cursor: pointer;
+}
+
+.header .sign-in {
+    cursor: pointer;
+}
+
+.home-icon:before {
+    content: "\1F3E0";
+    margin-right: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 40px); /* Adjusted height to account for header */
+}
+
+.form-box {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin: auto;
+}
+
+h2 {
+   text-align: center; 
+   margin-bottom: 24px; 
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+   width: 100%;
+   padding: 10px; 
+   margin-bottom: 16px; 
+   border-radius: 5px; 
+   border: 1px solid #555;
+   background-color: #222; /* Dark color for input background */
+   color: white;
+}
+
+button {
+   width: 100%;
+   padding: 10px;
+   background-color: #5cb85c; 
+   color: white; 
+   border: none; 
+   border-radius: 5px; 
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #4cae4c;
+}
+
+.form-box a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+.form-box form {
+    display: none; /* Hide all forms by default */
+}
+
+.form-box form.active {
+    display: block; /* Only show the active form */
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .logout-button:hover {
+    background-color: #d32f2f; /* Darker red */
+  }
