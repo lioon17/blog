@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome stylesheet -->
+   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="/style.css">
+    <title>Top Bar</title>
+    
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="images/logo6.jpg" alt="Logo">
+        </div>
+        <nav>
+            
+            <ul class="sidebar">
+              <li onclick=closeSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/article-page">Article Page</a></li>
+                <li><a href="/about-us">About</a></li>
+            </ul>
+            <ul>
+                <li class="hideOnMobile"><a href="/index">Home</a></li>
+                <li class="hideOnMobile"><a href="/article-page">Article page</a></li>
+                <li class="hideOnMobile"><a href="/about-us">About</a></li>
+                <li class="menu"onclick=showSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z"/></svg></a></li>
+            </ul>
+    </nav>
+    </div>
+    
+    </div><div class="post">
+        <h1 id="post-title"><%= post.title %></h1>
+        <div id="post-meta">
+          <span id="post-author">Author: <%= post.author %></span> |
+          <span id="post-date">Date: <%= post.date %></span>
+        </div>
+        <div id="post-content">
+          <%- post.content %>
+        </div>
+        <div id="post-media">
+          <% if (post.images) { %>
+            <img src="/image/<%= post.id %>" alt="Image" class="post-image">
+          <% } else { %>
+            <p>No image available</p>
+          <% } %>
+          <% if (post.video) { %>
+            <iframe class="post-video" src="/video/<%= post.id %>" frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe>
+          <% } %>
+          
+        </div>
+      </div>
+      
+    
+   
+       
+    <footer class="footer">
+        <div class="newsletter">
+            <h4>Subscribe to our Newsletter</h4>
+            <p><input type="checkbox" id="privacy-policy"> <label for="privacy-policy">I have read the privacy policy and agree to the terms</label></p>
+            <form id="newsletter-form" action="/subscribe" method="post">
+                <div class="email-input">
+                    <i class="fas fa-envelope"></i> <!-- Email icon -->
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section">
+          <div class="footer-logo">
+              <img src="images/logo4.jpg" alt="Logo">
+          </div>
+          <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article-page.html">Article Page</a></li>
+                <li><a href="about-us.html">About</a></li>
+            </ul>
+          </nav>
+      </div>
+       
+    </footer>
+    <div class="copyright-bar">
+      <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+  </div>
+    
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/script.js"></script>
+  
+</body>
+</html>

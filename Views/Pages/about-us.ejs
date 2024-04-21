@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome stylesheet -->
+   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="style.css">
+    <title>Top Bar</title>
+    
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="images/logo6.jpg" alt="Logo">
+        </div>
+        <nav>
+            
+          <ul class="sidebar">
+            <li onclick=closeSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+              <li><a href="/index">Home</a></li>
+              <li><a href="/article-page">Article Page</a></li>
+              <li><a href="/about-us">About</a></li>
+            
+          </ul>
+          <ul>
+              <li class="hideOnMobile"><a href="/index">Home</a></li>
+              <li class="hideOnMobile"><a href="/article-page">Article page</a></li>
+              <li class="hideOnMobile"><a href="/about-us">About</a></li>
+              <li class="menu"onclick=showSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z"/></svg></a></li>
+              <button class="logout-button" onclick="logout()">Logout</button>
+            </ul>
+  </nav>
+    </div>
+    <div class="wrapper">
+    <div class="container">
+        <div id="about-us">About Us</div>
+        <div class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <img src="images/typing.jpg" alt="Company Image" id="image">
+
+        <h4>who are we?</h4>
+        <div id="who-are-we">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero justo. Ut venenatis sodales velit, sit amet semper neque.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero justo. Ut venenatis sodales velit, sit amet semper neque.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero justo. Ut venenatis sodales velit, sit amet semper neque.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero justo. Ut venenatis sodales velit, sit amet semper neque.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero justo. Ut venenatis sodales velit, sit amet semper neque.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero justo. Ut venenatis sodales velit, sit amet semper neque.
+                Nullam lacinia nunc sit amet turpis tincidunt, vel rutrum nunc tempor. Proin ultrices nulla vitae lectus vulputate, eget tempor turpis convallis. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero justo. Ut venenatis sodales velit, sit amet semper neque.
+                <a href="#" id="corporate-structure">Our Corporate Structure &#8594;</a>
+            </p>
+           
+        </div>
+        <div id="top-contributors">
+          <div class="title" style="font-size: 16px; opacity: 0.6;">Top Contributors</div>
+          <img src="images/logo2.jpg" alt="Logo 1" class="logo">
+          <img src="images/logo3.jpg" alt="Logo 2" class="logo">
+          <img src="images/logo4.jpg" alt="Logo 3" class="logo">
+          <img src="images/logo5.jpg" alt="Logo 4" class="logo">
+      </div>
+  </div>
+
+    <div id="what-we-do">
+        <div class="section">
+          <img src="images/office.jpg" alt="Image">
+        </div>
+        <div class="section">
+          <h2>What We Do</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra. Nullam scelerisque id mi et varius. Sed vel urna nec turpis consequat viverra nec at mi.</p>
+          <div>
+            <span class="icon icon-people">&#128101;</span>
+            <h3>Our Team</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra.</p>
+          </div>
+          <div>
+            <span class="icon icon-analysis">&#128202;</span>
+            <h3>Analysis</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-stats">
+        <div class="column">
+          <div class="number">30K</div>
+          <h3>Colleagues</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra.</p>
+        </div>
+        <div class="column">
+          <div class="number">200+</div>
+          <h3>Cities</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra.</p>
+        </div>
+        <div class="column">
+          <div class="number">1245+</div>
+          <h3>Authors</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra.</p>
+        </div>
+        <div class="column">
+          <div class="number">35+</div>
+          <h3>Years</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra.</p>
+          
+        </div>
+      </div>
+
+      
+
+    <div class="ceo">
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+      
+      <div class="ceo-info">
+        <img src="images/kevin.jpg" alt="CEO Image">
+      </div>
+      
+      <div class="ceo-details">
+        <h4>The team behind us</h4>
+        <div class="ceo-title">CEO</div>
+        <div class="ceo-name">John Doe</div>
+        <div class="ceo-tag">CEO and Co-founder</div>
+        <p class="ceo-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra. 
+          Nullam scelerisque id mi et varius. Sed vel urna nec turpis consequat viverra nec at mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit at lacus eleifend pharetra. 
+          Nullam scelerisque id mi et varius. Sed vel urna nec turpis consequat viverra nec at mi.</p>
+      </div>
+    </div>
+
+    <div class="image-link-section">
+      <div class="image-link">
+          <a href="#">
+              <img src="images/office2.jpg" alt="Image 1">
+              <i class="fa fa-link"></i> <!-- Icon for the first image -->
+          </a>
+          <p>First image description.</p>
+      </div>
+      <div class="image-link">
+          <a href="#">
+              <img src="images/office2.jpg" alt="Image 2">
+              <i class="fa fa-link"></i> <!-- Icon for the second image -->
+          </a>
+          <p>Second image description.</p>
+      </div>
+  </div>
+  
+
+<!--  <div class="button-container">
+    Updated button with new class and data attribute 
+    <button class="read-more-btn" id="fetchPostsBtn" data-post-id="2">Read All Posts</button>
+</div>
+-->
+  
+  
+
+<div class="box">
+  <h2>Ready to Talk?</h2>
+  <p>Enter your email below and we'll get in touch with you shortly.</p>
+  <input type="email" id="email-input" class="email-input" placeholder="Your Email">
+  <!-- The button now opens the default email client -->
+  <button class="button-box" onclick="window.location.href='mailto:thirstylioon2@gmail.com?subject=Contact Request&body=Please enter your message'">Contact Us</button>
+</div>
+
+    </div>
+  
+    
+    <footer class="footer">
+      <div class="newsletter">
+          <h4>Subscribe to our Newsletter</h4>
+          <p><input type="checkbox" id="privacy-policy"> <label for="privacy-policy">I have read the privacy policy and agree to the terms</label></p>
+          <form id="newsletter-form" action="/subscribe" method="post">
+            <div class="email-input">
+                <i class="fas fa-envelope"></i> <!-- Email icon -->
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-section">
+        <div class="footer-logo">
+            <img src="images/logo4.jpg" alt="Logo">
+        </div>
+        <nav class="footer-nav">
+            <ul>
+              <li><a href="/index">Home</a></li>
+              <li><a href="/article-page">Article Page</a></li>
+              <li><a href="/about-us">About</a></li>
+            </ul>
+        </nav>
+    </div>
+     
+  </footer>
+  <div class="copyright-bar">
+    <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+</div>
+ 
+ <script src="/script.js"></script>
+</body>
+</html>

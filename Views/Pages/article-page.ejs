@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome stylesheet --> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="style.css">
+    <title>Top Bar</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="images/logo6.jpg" alt="Logo">
+        </div>
+        <nav>
+            
+            <ul class="sidebar">
+              <li onclick=closeSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/article-page">Article Page</a></li>
+                <li><a href="/about-us">About</a></li>
+                      
+                <li>
+                    <input type="text" id="sidebar-search-bar" class="search-bar" placeholder="Search...">
+                    <button onclick="searchSidebar()">Go</button>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="hideOnMobile"><a href="/index">Home</a></li>
+                <li class="hideOnMobile"><a href="/article-page">Article page</a></li>
+                <li class="hideOnMobile"><a href="/about-us">About</a></li>
+                <li class="hideOnMobile">
+                    <input type="text" id="main-search-bar" class="search-bar" placeholder="Search...">
+                    <button onclick="searchMain()">Go</button>
+                </li>
+                <li class="menu"onclick=showSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z"/></svg></a></li>
+                <button class="logout-button" onclick="logout()">Logout</button>
+            </ul>
+           
+    </nav>
+    </div>
+    </div>
+
+    <div id="blogResults" class="search-results hidden"></div>
+
+
+    <div id="pageItems">
+
+        <div class="article-container" data-article-id="123">
+            <div class="first-container">
+                <h2 id="title-123"> Embracing Ethical Beauty: The Rise of Fair Cosmetics</h2>
+                <div class="image-container">
+                    <img id="image-123" class="work" src="images/meeting1.jpg" alt="Image Description">
+                </div>
+                <p><em class="author" id="author-123">Written by: - - -</em></p>
+                <p id="content-123">In recent years, the beauty industry has undergone a profound transformation, with consumers increasingly prioritizing ethical and sustainable practices. One area that has garnered significant attention is the production and sale of fair cosmetics. From cruelty-free formulations to ethically sourced ingredients, fair cosmetics represent a paradigm shift towards a more conscientious approach to beauty.
+
+At its core, fair cosmetics encompass a commitment to social responsibility, environmental sustainability, and animal welfare. Unlike traditional beauty products, which may rely on animal testing or exploit workers in the supply chain, fair cosmetics uphold ethical standards at every stage of production. This commitment extends beyond mere marketing rhetoric, as brands strive to transparently disclose their practices and uphold rigorous certification standards.
+
+One of the fundamental pillars of fair cosmetics is the abolition of animal testing. For decades, animals such as rabbits, mice, and guinea pigs have been subjected to painful experiments to assess the safety and efficacy of cosmetic ingredients. However, advancements in alternative testing methods, coupled with growing public outcry against animal cruelty, have prompted many brands to embrace cruelty-free formulations. By eschewing animal testing, fair cosmetics not only spare countless animals from suffering but also demonstrate a commitment to ethical principles.
+
+Furthermore, fair cosmetics prioritize the use of sustainably sourced ingredients that minimize environmental impact and support local communities. This often involves partnering with farmers and cooperatives to obtain natural ingredients such as plant extracts, essential oils, and botanicals. By fostering fair trade practices, brands can ensure that workers receive fair wages and operate in safe working conditions. Moreover, sustainable sourcing helps preserve biodiversity and protect fragile ecosystems, thereby promoting environmental stewardship.
+
+Another key aspect of fair cosmetics is transparency in labeling and marketing. Consumers are increasingly demanding greater accountability from brands, seeking clear information about product ingredients, sourcing practices, and manufacturing processes. Fair cosmetic brands embrace this ethos by providing detailed product labels, third-party certifications, and comprehensive online resources. By empowering consumers to make informed choices, fair cosmetics foster trust and accountability within the beauty industry.
+
+Moreover, fair cosmetics strive to promote inclusivity and diversity, celebrating beauty in all its forms. This includes offering a diverse range of shades and formulations to cater to individuals of different skin tones, ethnicities, and cultural backgrounds. By embracing diversity and representation, fair cosmetic brands challenge conventional beauty standards and promote inclusivity as a cornerstone of their ethos.
+
+In addition to ethical considerations, fair cosmetics also prioritize product efficacy and quality. Contrary to misconceptions that ethical beauty products may compromise on performance, fair cosmetics demonstrate that it is possible to achieve stellar results without compromising on values. From luxurious skincare formulations to vibrant makeup palettes, fair cosmetic brands leverage cutting-edge research and innovation to deliver products that meet the highest standards of quality and performance.
+
+As consumers become increasingly discerning about the products they use, fair cosmetics have emerged as a beacon of integrity and sustainability in the beauty landscape. By embracing ethical principles, fair cosmetic brands not only inspire confidence and loyalty among consumers but also drive positive change within the industry. From promoting animal welfare to supporting sustainable livelihoods, fair cosmetics embody a vision of beauty that is as ethical as it is glamorous.</p>
+            <div class="image-row">
+                <img src="images/work.jpg" alt="Image 1">
+                <img src="images/work.jpg" alt="Image 2">
+                <img src="images/work.jpg" alt="Image 3">
+                <img src="images/work.jpg" alt="Image 4">
+            </div>
+            <div class="image-row">
+                <img src="images/work.jpg" alt="Image 1">
+                <img src="images/work.jpg" alt="Image 2">
+                <img src="images/work.jpg" alt="Image 3">
+                <img src="images/work.jpg" alt="Image 4">
+            </div>
+           <p id="content-124">In conclusion, fair cosmetics represent a transformative shift towards a more ethical and sustainable approach to beauty. By prioritizing principles of social responsibility, environmental stewardship, and inclusivity, fair cosmetic brands are reshaping the beauty industry for the better. As consumers continue to demand transparency, accountability, and integrity from brands, fair cosmetics stand poised to lead the charge towards a brighter, fairer future for beauty.</p>
+            <!-- Place for images -->
+           
+        </div>
+        <!-- Buttons for switching topics -->
+        <div class="topic-buttons">
+            <button  class="read-more-btn" data-post-id="6">Science of Change</button>
+            <button class="read-more-btn" data-post-id="2">Tech and Strategy</button>
+            <button class="read-more-btn" data-post-id="5">Business and Society</button>
+            <button class="read-more-btn" data-post-id="7">Humanity of Business</button>
+            <div class="icon-buttons">
+                <button class="share-button" onclick="shareArticle()">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+                
+                <button class="like-button" onclick="likeArticle()">
+                    <i class="fas fa-thumbs-up"></i> Like
+                </button>
+                
+                <button class="download-button" onclick="downloadPDF()">
+                    <i class="fas fa-file-pdf"></i>  PDF
+                </button>
+                <button class="download-button" onclick="downloadDocument()">
+                    <i class="fas fa-download"></i> Download
+                </button>
+            </div>
+            
+        </div>
+        
+        <div id="comment-section">
+            <!-- New comments will be dynamically added here -->
+        </div>
+        
+        <!-- Comment Form -->
+        <form id="comment-form">
+            <input type="text" id="commenter-name" placeholder="Your Name">
+            <textarea id="comment-text" placeholder="Write your comment here"></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+    </div>
+
+
+    <div class="article-container">
+        <div class="first-container">
+            <h2 id="title-125">Empowering the World: The Vital Role of Electricity</h2>
+            <section class="video-section">
+        <div class="video-container">    
+        <video controls  autoplay  muted src="images/Electrical.mp4"  width="1440" height="400">
+         </video>
+        </div>
+        </section>
+        <p><em class="author" id="author-125">Written by: - - -</em></p>
+            <p id="content-125">
+Electricity is the lifeblood of modern civilization, powering our homes, businesses, and industries with unparalleled efficiency and convenience. It is a fundamental force of nature, generated from various sources such as coal, natural gas, nuclear energy, renewable sources like solar and wind, and increasingly, innovative technologies like fuel cells and wave energy converters.
+
+The discovery and harnessing of electricity revolutionized the way we live, work, and communicate. From the invention of the light bulb by Thomas Edison to the development of the electric motor by Nikola Tesla, electricity has fueled unprecedented advancements in technology and innovation. Today, it is impossible to imagine a world without electricity, as it powers everything from smartphones and computers to transportation systems and medical equipment.
+
+The production of electricity involves the conversion of energy from one form to another. In traditional power plants, fuel such as coal or natural gas is burned to generate steam, which drives turbines connected to generators, producing electricity. In contrast, renewable energy sources harness natural processes like sunlight, wind, and water flow to generate electricity without emitting harmful pollutants or greenhouse gases.
+
+Electricity is not only essential for everyday conveniences but also plays a crucial role in addressing global challenges such as climate change and energy security. The transition towards renewable energy sources is driving a shift towards a more sustainable and resilient energy system. Additionally, advancements in energy storage technologies are enabling the integration of intermittent renewable sources into the grid, ensuring reliable and affordable electricity supply.
+
+As we look towards the future, electricity will continue to be at the forefront of efforts to build a cleaner, more efficient, and equitable energy system. From decentralized microgrids to smart grid technologies, innovations in electricity generation, distribution, and consumption hold the promise of a brighter and more sustainable future for generations to come.</p>
+           
+        
+        </div>
+        <!-- Buttons for switching topics -->
+        <div class="topic-buttons">
+            <button  class="read-more-btn" data-post-id="6">Science of Change</button>
+            <button class="read-more-btn" data-post-id="2">Tech and Strategy</button>
+            <button class="read-more-btn" data-post-id="5">Business and Society</button>
+            <button class="read-more-btn" data-post-id="7">Humanity of Business</button>
+        </div>
+        
+        </div>
+    <!--
+        <h2>Upload File</h2>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="media" />
+    <input type="submit" value="Upload" />
+  </form> -->
+    </div>
+    <footer class="footer">
+        <div class="newsletter">
+            <h4>Subscribe to our Newsletter</h4>
+            <p><input type="checkbox" id="privacy-policy"> <label for="privacy-policy">I have read the privacy policy and agree to the terms</label></p>
+            <form id="newsletter-form" action="/subscribe" method="post">
+                <div class="email-input">
+                    <i class="fas fa-envelope"></i> <!-- Email icon -->
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section">
+          <div class="footer-logo">
+              <img src="images/logo4.jpg" alt="Logo">
+          </div>
+          <nav class="footer-nav">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/article-page">Article Page</a></li>
+                <li><a href="/about-us">About</a></li>
+            </ul>
+          </nav>
+      </div>
+       
+    </footer>
+    <div class="copyright-bar">
+      <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+  </div>
+  
+  <script src="/script.js"></script>
+  
+</body>
+</html>
