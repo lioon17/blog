@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoppin Dashboard</title>
+<link rel="stylesheet" href="/style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+  <header id="fixed-header">
+    <nav>
+        <div class="brand text-white">
+            <div class="brand-name">
+                <h4>Shoppin</h4>
+                <!-- <i cla></i> -->
+            </div>
+            <div class="toggle_btn">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+        <form id="search" class="search_bar">
+            <input type="search" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Search">
+            <button type="submit" class="btn">
+                <i class="bi bi-search"></i>
+            </button>
+        </form>
+        <div class="links text-white">
+                
+          
+      </div>
+    </nav>
+</header>
+
+
+ 
+<div class="main-content">
+  <div class="overview">
+    <h2>Overview</h2>
+    <div id="calendar"></div>
+  </div>
+
+  <div class="card">
+    <h3>Avg. Order Value</h3>
+    <p>$306.20 <span style="color:green;">⬆ 1.3%</span> in last 30 days</p>
+  </div>
+  <div class="card">
+    <h3>Order Quantity</h3>
+    <p>7650 <span style="color:red;">⬇ 1.8%</span> in last 30 days</p>
+  </div>
+  <div class="card">
+    <h3>Unique Purchases</h3>
+    <p>3,137 <span style="color:green;">⬆ 2.3%</span> in last 30 days</p>
+  </div>
+
+  <div class="card1">
+    <h2>Total sales</h2>
+    <canvas id="lineChart2" height="400" width="900"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <div class="sales-report">
+      <div class="sales-chart-container">
+        <div class="chart">
+          <canvas id="barChart" height="500" width="850"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Sales Breakdown</h2>
+      <canvas id="donutChart" height="100" width="600"></canvas>
+      <div id="chartLegend"></div>
+      <hr>
+      <a href="#more-insights">More Insights</a>
+    </div>
+  </div>
+<br>
+  <div class="customer-section">
+    <!-- Search Bar -->
+    <input type="text" class="search-bar" placeholder="Search customer details...">
+
+    <!-- Customer Info and Notes -->
+    <div class="customer-info">
+      <!-- Customer Details -->
+      <div class="customer-card">
+        <h2>Customer Details</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Phone Number:</strong> +1234567890</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+      </div>
+
+      <!-- Customer Notes -->
+      <div class="customer-notes">
+        <h2>Notes</h2>
+        <p>Customer prefers email communication.</p>
+        <p>Interested in new arrivals of smart gadgets.</p>
+      </div>
+    </div>
+
+    <!-- Order History -->
+    <div class="order-history">
+      <h2>Order History</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>product_id</th>
+              <th>mpesa_code</th>
+              <th>phone_number</th>
+              <th>amount</th>
+              <th>transaction_date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>ABC123</td>
+              <td>+254712345678</td>
+              <td>500</td>
+              <td>2024-04-01</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>DEF456</td>
+              <td>+254723456789</td>
+              <td>1000</td>
+              <td>2024-04-02</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>GHI789</td>
+              <td>+254734567890</td>
+              <td>750</td>
+              <td>2024-04-03</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>JKL012</td>
+              <td>+254745678901</td>
+              <td>300</td>
+              <td>2024-04-04</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>MNO345</td>
+              <td>+254756789012</td>
+              <td>2000</td>
+              <td>2024-04-05</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>PQR678</td>
+              <td>+254767890123</td>
+              <td>1500</td>
+              <td>2024-04-06</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>STU901</td>
+              <td>+254778901234</td>
+              <td>800</td>
+              <td>2024-04-07</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>VWX234</td>
+              <td>+254789012345</td>
+              <td>400</td>
+              <td>2024-04-08</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>YZA567</td>
+              <td>+254790123456</td>
+              <td>1200</td>
+              <td>2024-04-09</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>BCD890</td>
+              <td>+254701234567</td>
+              <td>600</td>
+              <td>2024-04-10</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>CDE123</td>
+              <td>+254702345678</td>
+              <td>950</td>
+              <td>2024-04-11</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>EFG456</td>
+              <td>+254703456789</td>
+              <td>1800</td>
+              <td>2024-04-12</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.min.js"></script>
+
+  <script>
+   window.addEventListener('DOMContentLoaded', (event) => {
+    const lineChartCanvas = document.getElementById('lineChart');
+    const resizeObserver = new ResizeObserver(entries => {
+        const entry = entries[0];
+        lineChartCanvas.width = entry.contentRect.width;
+    });
+    resizeObserver.observe(lineChartCanvas);
+  });
+
+      function displayCalendar() {
+      var calendarDiv = document.getElementById("calendar");
+      var currentDate = new Date();
+      var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      calendarDiv.innerHTML = currentDate.toLocaleDateString('en-US', options);
+    }
+
+    // Call the function to display the calendar
+    displayCalendar();
+    const socket = io.connect('http://localhost:4000');
+    const ctx = document.getElementById('lineChart2').getContext('2d');
+const lineChart2 = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels:  ['January', 'February', 'March', 'April', 'May', 'June','July','August','September','October','November','December'],
+        datasets: [{
+            label: 'Product A',
+            data:  [20, 25, 30, 15, 40, 20, 35, 10, 25, 30, 15, 40],
+            borderColor:'rgba(54, 162, 235, 1)',
+            lineTension:0.5,
+            borderWidth: 2
+        }, {
+            label: 'Product B',
+            data:  [30, 20, 35, 25, 45, 30, 50, 20, 40, 35, 25, 45],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            lineTension:0.5,
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+  // Bar Chart
+  const barCtx = document.getElementById('barChart').getContext('2d');
+    const barChart = new Chart(barCtx, {
+        type: 'bar',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June','July','August','September','October','November','December'],
+            datasets: [{
+                label: 'Expense',
+                backgroundColor: 'rgba(54, 162, 235, 1)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                data: [20, 25, 30, 15, 40, 20, 35, 10, 25, 30, 15, 40]
+            }, {
+                label: 'Income',
+                backgroundColor: 'rgba(75, 192, 192, 1)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                data: [30, 20, 35, 25, 45, 30, 50, 20, 40, 35, 25, 45]
+            }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Sales Report', // Title text
+                position: 'top', // Position of the title (options: 'top', 'left', 'bottom', 'right')
+                align: 'start', // Alignment of the title (options: 'start', 'center', 'end')
+                font: {
+                    size: 18, // Font size
+                    weight: 'bold' // Font weight
+                },
+                padding: {
+                    top: 10,
+                    bottom: 10
+                }
+            }
+        },
+        scales: {
+            x: {
+                stacked: true,
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Month'
+                }
+            },
+            y: {
+                stacked: true,
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Amount'
+                }
+            }
+        }
+    }
+});
+
+const data = {
+  labels: [
+    'Product 1', 'Product 2', 'Product 3', 'Product 4', 'Product 5',
+    'Product 6', 'Product 7', 'Product 8', 'Product 9', 'Product 10'
+  ],
+  datasets: [{
+    label: 'Sales Breakdown',
+    data: [12, 19, 3, 5, 2, 3, 9, 7, 4, 6],
+    backgroundColor: [
+      '#FF6384', '#36A2EB', '#FFCE56', '#E7E9ED', '#4BC0C0',
+      '#9966FF', '#FF9F40', '#FF6384', '#36A2EB', '#FFCE56'
+    ],
+    hoverOffset: 4
+  }]
+};
+
+const config = {
+  type: 'doughnut',
+  data: data,
+  options: {
+    responsive: true,
+    cutout: '75%', // Adjust this value to change the doughnut thickness
+    plugins: {
+      legend: {
+        display: false
+      },
+      title: {
+        display: true,
+        text: ' Donut Chart'
+      }
+    }
+  }
+};
+
+const donutChart = new Chart(
+  document.getElementById('donutChart'),
+  config
+);
+
+// Generate legend
+const legend = document.getElementById('chartLegend');
+donutChart.data.labels.forEach((label, index) => {
+  const color = donutChart.data.datasets[0].backgroundColor[index];
+  const percentage = donutChart.data.datasets[0].data[index];
+  const legendItem = document.createElement('div');
+  legendItem.innerHTML = `
+    <span style="background-color: ${color}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 10px;"></span>
+    ${label} - ${percentage}%
+  `;
+  legend.appendChild(legendItem);
+});
+
+
+
+socket.on('update-charts', (data) => {
+  // Update line chart
+  lineChart.data.labels = data.map(item => item.date);
+  lineChart.data.datasets[0].data = data.map(item => item.amount);
+  lineChart.update();
+
+  // Update bar chart
+  barChart.data.labels = data.map(item => item.product_name);
+  barChart.data.datasets[0].data = data.map(item => item.units_sold);
+  barChart.update();
+
+  // Update doughnut chart
+  doughnutChart.data.labels = data.map(item => item.category_name);
+  doughnutChart.data.datasets[0].data = data.map(item => item.percentage);
+  doughnutChart.update();
+});
+
+  </script>
+</body>
+</html>
