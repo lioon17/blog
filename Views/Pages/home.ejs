@@ -250,7 +250,7 @@ const lineChart2 = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -371,6 +371,15 @@ donutChart.data.labels.forEach((label, index) => {
   legend.appendChild(legendItem);
 });
 
+const resizeObserver = new ResizeObserver(entries => {
+  // Your resize handling logic here
+});
+const elementToObserve = document.getElementById('elementId');
+if (elementToObserve) {
+  resizeObserver.observe(elementToObserve);
+} else {
+  console.error('Element to observe not found');
+}
 
 
 socket.on('update-charts', (data) => {
